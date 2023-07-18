@@ -7,21 +7,30 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
     return res.status(200).json(users);
   }
+
   if (req.method === "POST") {
-    console.log(req.body, req.headers, req.query);
     const data = req.body.data;
     const user = await prisma.users.findUnique({ where: { clerkId: data.id } });
 
     if (user) return res.status(401).json({ error: "User already created" });
 
-    const newUser = await prisma.users
-      .create({
-        data: {
-          clerkId: data.id,
-          email: data.email_addresses[0].email_address,
-        },
-      })
-      .then((t) => console.log(t));
+    await prisma.users.create({
+      data: {
+        clerkId: data.id,
+        email: data.email_addresses[0].email_address,
+      },
+    });
+
+    return res.status(200).json({ message: "user Successfully created" });
+  }
+
+  if (req.method === "DELETE") {
+    const data = req.body.data;
+    const user = await prisma.users.findUnique({ where: { clerkId: data.id } });
+
+    if (!user) return res.status(401).json({ error: "User doesn't exist" });
+
+    await prisma.users.delete({ where: { clerkId: user.clerkId } });
 
     return res.status(200).json({ message: "user Successfully created" });
   }
