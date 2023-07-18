@@ -14,9 +14,9 @@ datasource db {
 ////////////////////////////////////////////////
 
 model Users {
-  id          String @id @default(uuid())
+  id          String @default(uuid())
+  clerkId     String @id @db.VarChar(255)
   email       String @db.VarChar(255)
-  password    String @db.VarChar(255)
   image       String? @db.VarChar(255)
 }
 
