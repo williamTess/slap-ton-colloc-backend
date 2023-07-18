@@ -9,7 +9,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(400).json({ err: "Not a valid ID" });
   }
 
-  const user = await prisma.users.findUnique({ where: { id: id } });
+  const user = await prisma.users.findUnique({ where: { clerkId: id } });
   if (!user) return res.status(404).json({ err: "User not found" });
 
   return res.status(200).json(user);

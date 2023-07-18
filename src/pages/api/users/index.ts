@@ -10,7 +10,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "POST") {
     console.log(req.body, req.headers, req.query);
     const data = req.body.data;
-    const user = await prisma.users.findUnique({ where: { id: data.id } });
+    const user = await prisma.users.findUnique({ where: { clerkId: data.id } });
 
     if (user) return res.status(401).json({ error: "User already created" });
 
