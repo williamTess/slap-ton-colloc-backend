@@ -6,7 +6,7 @@ const initUser = async () => {
   const newUser = await prisma.users
     .create({
       data: {
-        password: "ijduidhgzuey",
+        clerkId: "fbhjrbfjeh",
         email: "leo@gmail.io",
       },
     })
