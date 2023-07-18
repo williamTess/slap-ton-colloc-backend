@@ -9,11 +9,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   }
 
   if (req.method === "POST") {
-    return postUsers(req, res);
-  }
-
-  if (req.method === "DEL") {
-    return deleteUsers(req, res);
+    const type = req.body.type;
+    if (type === "user.created") return postUsers(req, res);
+    if (type === "user.deleted") return deleteUsers(req, res);
   }
 };
 
