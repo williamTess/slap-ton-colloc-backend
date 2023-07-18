@@ -12,7 +12,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     return postUsers(req, res);
   }
 
-  if (req.method === "DELETE") {
+  if (req.method === "DEL") {
     return deleteUsers(req, res);
   }
 };
@@ -41,7 +41,7 @@ const deleteUsers = async (req: NextApiRequest, res: NextApiResponse) => {
 
   await prisma.users.delete({ where: { clerkId: user.clerkId } });
 
-  return res.status(200).json({ message: "user Successfully created" });
+  return res.status(200).json({ message: "user Successfully deleted" });
 };
 
 export default handler;
