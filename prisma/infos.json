@@ -1,0 +1,67 @@
+{
+  "categories": [
+    {
+      "id": "0",
+      "name": "Posters",
+      "description": "Tous les posters dessiné par grim-art",
+      "button": "Voir posters",
+      "link": "/posters",
+      "url": "luffy"
+    },
+    {
+      "id": "3",
+      "name": "Informations",
+      "description": "Decouvrez en plus sur votre artiste préféré",
+      "button": "Plus d'information",
+      "link": "/more-info",
+      "url": "profil"
+    },
+    {
+      "id": "2",
+      "name": "Personalisé",
+      "description": "Dessins specifics sur demande",
+      "button": "Faire ma demande",
+      "link": "/contact",
+      "url": "ange"
+    }
+  ],
+  "posters": [
+    {
+      "origin": "One piece",
+      "categories": "black",
+      "description": "Ganon",
+      "price": 10,
+      "url": "ganon"
+    },
+    {
+      "origin": "Demon slayer",
+      "categories": "Encre de chine/Lune rouge",
+      "description": "Ange",
+      "price": 10,
+      "url": "ange"
+    },
+    {
+      "origin": "Spider man",
+      "categories": "Lune rouge",
+      "description": "lUffy gear 5",
+      "price": 10,
+      "url": "luffy"
+    }
+  ],
+  "footer": {
+    "title": "Informations",
+    "links": [
+      { "label": "posters", "link": "/posters" },
+      { "label": "plus d'info", "link": "/more-info" },
+      { "label": "personalisé", "link": "/contact" }
+    ],
+    "insta": "link",
+    "mail": "link",
+    "twitter": "link",
+    "paypal": "link"
+  },
+  "filter": {
+    "origin": ["One piece", "Dragon ball", "Spider man", "Demon slayer"],
+    "style": ["Encre de chine", "Lune rouge", "Couleurs"]
+  }
+}

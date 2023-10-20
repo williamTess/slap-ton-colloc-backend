@@ -17,35 +17,15 @@ model Users {
   id          String @default(uuid())
   clerkId     String @id @db.VarChar(255)
   email       String @db.VarChar(255)
+  historique  String @db.Text  // Array
   image       String? @db.VarChar(255)
 }
 
-model Contracts {
+model Posters {
   id          String @id @default(uuid())
-  name        String @db.VarChar(255)
-  
-}
-
-model Rules {
-  id          String @id @default(uuid())
-  text        String @db.LongText()
-  rewardAmount Int @db.Int()
-}
-
-model Coins {
-  id          String @id @default(uuid())
-  name        String @db.VarChar(255)
-  image       String @db.VarChar(255)
-
-}
-
-model Groups {
-  id          String @id @default(uuid())
-  name        String @db.VarChar(255)
-  image       String @db.VarChar(255)
-}
-
-model Complaints {
-  id          String @id @default(uuid())
-  text        String @db.LongText()
+  origin      String @db.VarChar(255)
+  categories  String @db.VarChar(255)
+  description String @db.VarChar(255)
+  price       Int @db.Int()
+  url         String @db.VarChar(255)
 }
