@@ -18,6 +18,7 @@ model Users {
   clerkId     String @id @db.VarChar(255)
   email       String @db.VarChar(255)
   historique  String @db.Text  // Array
+  shoppingList  String @db.Text  // Array
   image       String? @db.VarChar(255)
 }
 

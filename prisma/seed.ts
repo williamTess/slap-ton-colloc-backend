@@ -9,6 +9,7 @@ const initUser = async () => {
         clerkId: "fbhjrbfjeh",
         email: "leo@gmail.io",
         historique: "",
+        shoppingList: "",
       },
     })
     .then((t) => console.log(t));

@@ -26,6 +26,7 @@ const postUsers = async (req: NextApiRequest, res: NextApiResponse) => {
       clerkId: data.id,
       email: data.email_addresses[0].email_address,
       historique: "",
+      shoppingList: "",
     },
   });
 
