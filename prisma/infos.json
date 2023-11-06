@@ -10,9 +10,9 @@
     },
     {
       "id": "3",
-      "name": "Informations",
-      "description": "Decouvrez en plus sur votre artiste préféré",
-      "button": "Plus d'information",
+      "name": "Produits",
+      "description": "Vêtements, accessoires et bien plus",
+      "button": "Voir le sproduits",
       "link": "/more-info",
       "url": "profil"
     },
@@ -60,7 +60,7 @@
     "twitter": "link",
     "paypal": "link"
   },
-  "filter": {
+  "filterPoster": {
     "origin": ["One piece", "Dragon ball", "Spider man", "Demon slayer"],
     "style": ["Encre de chine", "Lune rouge", "Couleurs"]
   }
